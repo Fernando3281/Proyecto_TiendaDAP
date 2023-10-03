@@ -15,7 +15,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
 
 body {
     font-family: sans-serif;
-    padding: 80px 20px 0;
+    padding: 100px 20px 0;
     background-color: darkseagreen;
 }
 
@@ -30,10 +30,10 @@ body {
 
 .aside{ 
     position: fixed;
-    top: 20%;
+    top: 13%;
     left: 0%;
     width: 20%;
-    height: 75%;
+    height: 82%;
     background-color: appworkspace;  
 }
 
@@ -43,10 +43,10 @@ body {
 
 .section{
     position: fixed;
-    top: 20%;
+    top: 13%;
     left: 20%;
     width: 80%;
-    height: 75%;
+    height: 82%;
     background-color: orange; 
     overflow-y: scroll;
     
