@@ -2,6 +2,9 @@ package com.tienda_v1.service;
 
 import com.tienda_v1.domain.Categoria;
 import java.util.List;
+import com.google.auth.Credentials;
+import com.google.auth.ServiceAccountSigner;
+import com.google.auth.oauth2.GoogleCredentials;
 
 public interface CategoriaService {
     

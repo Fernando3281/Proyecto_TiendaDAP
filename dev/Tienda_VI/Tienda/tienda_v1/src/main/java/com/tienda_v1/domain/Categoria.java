@@ -19,7 +19,7 @@ public class Categoria implements Serializable{ //la serializacion funciona para
     @Id //tabla categoria tiene un identificador que va a ser el id
     @GeneratedValue(strategy = GenerationType.IDENTITY)// los valores generados que tipo de estrategia utilizan, identico = sea igual en BD y en la clase
     @Column(name="id_categoria")//identifica cual es el numbre en la base de datos
-    private  long idCategoria;
+    private long idCategoria;
     private String descripcion;
     private String rutaImagen;
     private boolean activo;
