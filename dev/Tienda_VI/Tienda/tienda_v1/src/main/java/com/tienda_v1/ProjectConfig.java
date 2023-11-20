@@ -77,8 +77,7 @@ public class ProjectConfig implements WebMvcConfigurer {
                         "/categoria/modificar/**", "/categoria/eliminar/**",
                         "/usuario/nuevo", "/usuario/guardar",
                         "/usuario/modificar/**", "/usuario/eliminar/**",
-                        "/reportes/**"
-                ).hasRole("ADMIN")
+                        "/reportes/**").hasRole("ADMIN")
                 .requestMatchers(
                         "/producto/listado",
                         "/categoria/listado",
@@ -88,15 +87,12 @@ public class ProjectConfig implements WebMvcConfigurer {
                 .hasRole("USER")
                 )
                 .formLogin((form) -> form
-                .loginPage("/login").permitAll()
-                )
+                .loginPage("/login").permitAll())
                 .logout((logout) -> logout.permitAll());
-
         return http.build();
     }
-
-    /* El siguiente método se utiliza para completar la clase no es realmente funcional,
-   la próxima semana se reemplaza con usuarios de BD */
+    
+    /* El siguiente método se utiliza para completar la clase no es     realmente funcional, la próxima semana se reemplaza con usuarios de BD */ 
     @Bean
     public UserDetailsService users() {
         UserDetails admin = User.builder()
@@ -104,19 +100,16 @@ public class ProjectConfig implements WebMvcConfigurer {
                 .password("{noop}123")
                 .roles("USER", "VENDEDOR", "ADMIN")
                 .build();
-
         UserDetails sales = User.builder()
                 .username("rebeca")
                 .password("{noop}456")
                 .roles("USER", "VENDEDOR")
                 .build();
-
         UserDetails user = User.builder()
                 .username("pedro")
                 .password("{noop}789")
                 .roles("USER")
                 .build();
-
         return new InMemoryUserDetailsManager(user, sales, admin);
     }
 
